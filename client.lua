@@ -19,6 +19,7 @@ end)
 RegisterNUICallback('SaveDocument', function(data)
     if data.url ~= nil then
         TriggerServerEvent('wp-printer:server:SaveDocument', data.url)
+        TriggerEvent('wais:addmissionxp:print', 1) --added by pamela for wais battlepass
     end
 end)
 
